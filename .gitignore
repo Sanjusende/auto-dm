@@ -1,0 +1,4 @@
+node_modules
+.env
+debug_output.txt
+debug_data.json
