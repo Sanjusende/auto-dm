@@ -71,11 +71,13 @@ const handleWebhookEvents = async (req, res) => {
                         console.log(`   - Media ID: ${mediaId}`);
                         console.log(`   - Commenter ID: ${commenterId}`);
 
-                        // Prevent replying to self (if needed, though API usually filters)
+                        // Prevent replying to self (TEMPORARILY DISABLED FOR TESTING)
+                        /*
                         if (commenterId === instagramId) {
                             console.log('⚠️ Comment is from the business account itself. Ignoring.');
                             continue;
                         }
+                        */
 
                         // Use case-insensitive keyword matching, AND Filter by Reel ID
                         // We strictly want to reply only if the comment is on the SPECIFIC Reel we set up automation for.
