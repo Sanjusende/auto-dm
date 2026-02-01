@@ -37,6 +37,11 @@ app.use('/api/webhooks', require('./routes/webhookRoutes'));
 /*                                PUBLIC ROUTES                               */
 /* -------------------------------------------------------------------------- */
 
+// Root Route (Health Check & Meta Verification)
+app.get('/', (req, res) => {
+    res.send('✅ Auto DM Server is Running! Privacy Policy at /privacy-policy');
+});
+
 // GET Public Profile by Username
 app.get('/api/public/:username', async (req, res) => {
     try {
